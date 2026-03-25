@@ -1,0 +1,37 @@
+.container {
+    width: 550px;
+    height: 400px;
+    background-color: rgb(245, 235, 243);
+    display: grid;
+    grid-template-areas:
+      "header header header "
+      "sidebar content1 content1"
+      "sidebar content2 content3"
+      "footer footer footer";
+  }
+  .items {
+    background-color: chartreuse;
+    border: 2px solid black;
+    text-align: center;
+    padding: 30px;
+    margin: 4px;
+    font-weight: bold;
+  }
+  #i1 {
+    grid-area: header;
+  }
+  #i2 {
+    grid-area: sidebar;
+  }
+  #i3 {
+    grid-area: content1;
+  }
+  #i4 {
+    grid-area: content2;
+  }
+  #i5 {
+    grid-area: content3;
+  }
+  #i6 {
+    grid-area: footer;
+  }
