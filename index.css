@@ -137,6 +137,31 @@ p {
   background: #bbf7d0;
 }
 
+.code-panel {
+  margin-top: 18px;
+  padding: 18px;
+  border: 2px solid #233047;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+code {
+  color: #233047;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 640px) {
   body {
     padding: 16px;
