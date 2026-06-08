@@ -7,13 +7,38 @@
     <title>CSS Named Grid Demo</title>
   </head>
   <body>
-    <main class="container" aria-label="Named CSS grid layout demo">
-      <header class="items header">Header</header>
-      <aside class="items sidebar">Side Bar</aside>
-      <section class="items content-primary">Content 1</section>
-      <section class="items content-secondary">Content 2</section>
-      <section class="items content-tertiary">Content 3</section>
-      <footer class="items footer">Footer</footer>
+    <main class="page-shell">
+      <section class="controls" aria-labelledby="layout-title">
+        <div>
+          <h1 id="layout-title">Named Grid Areas</h1>
+          <p>Switch layouts to see how the same regions can move with CSS.</p>
+        </div>
+        <div class="button-group" aria-label="Layout options">
+          <button class="layout-button active" type="button" data-layout="dashboard">
+            Dashboard
+          </button>
+          <button class="layout-button" type="button" data-layout="article">
+            Article
+          </button>
+          <button class="layout-button" type="button" data-layout="gallery">
+            Gallery
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="container layout-dashboard"
+        aria-label="Named CSS grid layout demo"
+        data-grid
+      >
+        <header class="items header">Header</header>
+        <aside class="items sidebar">Side Bar</aside>
+        <section class="items content-primary">Content 1</section>
+        <section class="items content-secondary">Content 2</section>
+        <section class="items content-tertiary">Content 3</section>
+        <footer class="items footer">Footer</footer>
+      </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
