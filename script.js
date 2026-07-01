@@ -25,7 +25,10 @@ buttons.forEach((button) => {
     templateCode.textContent = templates[layout];
 
     buttons.forEach((item) => {
-      item.classList.toggle("active", item === button);
+      const isSelected = item === button;
+
+      item.classList.toggle("active", isSelected);
+      item.setAttribute("aria-pressed", String(isSelected));
     });
   });
 });
