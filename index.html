@@ -55,7 +55,12 @@
       </section>
 
       <section class="code-panel" aria-labelledby="code-title">
-        <h2 id="code-title">Current grid-template-areas</h2>
+        <div class="code-header">
+          <h2 id="code-title">Current grid-template-areas</h2>
+          <button class="copy-button" type="button" data-copy-template>
+            Copy CSS
+          </button>
+        </div>
         <p class="layout-summary" data-layout-summary>
           A dashboard-style layout with a persistent sidebar and stacked content regions.
         </p>
@@ -63,6 +68,7 @@
 "sidebar content1 content1"
 "sidebar content2 content3"
 "footer footer footer"</code></pre>
+        <p class="copy-status" data-copy-status aria-live="polite"></p>
       </section>
     </main>
     <script src="script.js"></script>

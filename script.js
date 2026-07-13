@@ -2,6 +2,8 @@ const grid = document.querySelector("[data-grid]");
 const buttons = document.querySelectorAll("[data-layout]");
 const templateCode = document.querySelector("[data-template-code]");
 const layoutSummary = document.querySelector("[data-layout-summary]");
+const copyButton = document.querySelector("[data-copy-template]");
+const copyStatus = document.querySelector("[data-copy-status]");
 
 const templates = {
   dashboard: `"header header header"
@@ -67,5 +69,16 @@ document.addEventListener("keydown", (event) => {
     const nextIndex = (getActiveIndex() + direction + buttons.length) % buttons.length;
 
     setLayout(buttons[nextIndex].dataset.layout);
+  }
+});
+
+copyButton.addEventListener("click", async () => {
+  const css = `grid-template-areas:\n${templateCode.textContent};`;
+
+  try {
+    await navigator.clipboard.writeText(css);
+    copyStatus.textContent = "Copied the current template.";
+  } catch {
+    copyStatus.textContent = "Select the code above to copy it.";
   }
 });
