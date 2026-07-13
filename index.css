@@ -150,6 +150,11 @@ h2 {
   font-size: 1.1rem;
 }
 
+.layout-summary {
+  max-width: 62ch;
+  margin-bottom: 14px;
+}
+
 pre {
   margin: 0;
   overflow-x: auto;
